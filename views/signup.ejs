@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <div class="container" style="background-color: #ddd; padding: 50px">
+      <div style="text-align: center; margin-top: 70px">
+        <h2>
+          <b style="border-bottom: 3px solid #0099ff55">SIGNUP</b>
+        </h2>
+      </div>
+
+      <% include partials/components/signupform.ejs %>
+    </div>
+    <!-- <div class="row" style="display: none">
+      <div
+        class="col-10 offset-1"
+        style="background-color: bisque; height: 200px"
+      >
+        <% include partials/components/status.ejs %>
+      </div>
+    </div> -->
+    <% include partials/footer.ejs %> <% include partials/jsincludes.ejs %>
+  </body>
+</html>

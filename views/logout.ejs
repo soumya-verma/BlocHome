@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <div class="container" style="background-color: #ddd; padding: 50px">
+      <div style="text-align: center; margin-top: 70px">
+        <br /><br />
+        <h2>
+          <b style="border-bottom: 3px solid #0099ff55"
+            >You are logged in as<br /><%=user%></b
+          >
+        </h2>
+        <br /><br />
+        <center>
+          <form action="/logout" method="POST">
+            <button
+              class="w3-btn w3-input w3-card"
+              style="
+                background-color: #09f;
+                border: none;
+                width: 600px;
+                color: #fff;
+              "
+              type="submit"
+            >
+              Logout
+            </button>
+          </form>
+        </center>
+        <br /><br />
+      </div>
+    </div>
+    <% include partials/footer.ejs %> <% include partials/jsincludes.ejs %>
+  </body>
+</html>

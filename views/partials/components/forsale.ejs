@@ -1,0 +1,65 @@
+<div class="lands-container" style="position: relative; padding: 30px">
+  <button
+    style="position: absolute; left: 30px; top: 0; cursor: pointer"
+    id="updateOwnLandsButtonID"
+  >
+    <span class="fa fa-refresh"></span> Refresh Properties
+  </button>
+  <div class="w3-row ownLandsPanel">
+    <div class="property-container">
+      <div class="w3-row">
+        <% items.forEach(function(item){ %>
+        <form action="/buy" method="POST">
+          <div class="w3-third">
+            <div class="w3-card-4 property">
+              <table>
+                <tr>
+                  <center>
+                    <img
+                      src="data:image/<%=item.image.contentType%>;base64,
+                  <%=item.image.data.toString('base64')%>"
+                      height="200"
+                    />
+                  </center>
+                </tr>
+                <br />
+                <tr>
+                  <td><span class="fa fa-user"></span>&nbsp;&nbsp; Owner</td>
+                  <td><%=item.ownername%></td>
+                </tr>
+                <tr>
+                  <td><span class="fa fa-money"></span>&nbsp;&nbsp;Price</td>
+                  <td><%=item.price%>ETH</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="fa fa-map-marker"></span
+                    >&nbsp;&nbsp;&nbsp;Location
+                  </td>
+                  <td><%=item.location%></td>
+                </tr>
+                <tr>
+                  <td><span class="fa fa-at"></span>&nbsp;&nbsp;Contact</td>
+                  <td><%=item.owner%></td>
+                </tr>
+              </table>
+              <div style="text-align: center; padding-top: 20px">
+                <button
+                  class="w3-btn"
+                  style="background-color: #09f; color: #fff"
+                  type="submit"
+                  name="buyprop"
+                  value="<%=item._id%>"
+                  onclick="window.confirm('Do you want to buy this property?')"
+                >
+                  BUY
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</div>

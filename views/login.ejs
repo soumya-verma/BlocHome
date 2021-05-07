@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
+    <% include partials/header.ejs %>
+    <div class="container" style="background-color: #ddd; padding: 50px">
+      <div style="text-align: center; margin-top: 70px">
+        <h2>
+          <b style="border-bottom: 3px solid #0099ff55">LOGIN</b>
+        </h2>
+      </div>
+
+      <% include partials/components/loginform.ejs %>
+      <center>
+        <p>
+          Are you a new user?
+          <span
+            ><b><a href="/signup">SignUp</a></b></span
+          >
+        </p>
+      </center>
+    </div>
+    <!-- <div class="row" style="display: none">
+      <div
+        class="col-10 offset-1"
+        style="background-color: bisque; height: 200px"
+      >
+        <% include partials/components/status.ejs %>
+      </div>
+    </div> -->
+    <% include partials/footer.ejs %> <% include partials/jsincludes.ejs %>
+
+    <!-- <script src="/js/arrive.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/loadLands.js"></script>
+    <script src="/js/operations.js"></script> -->
+  </body>
+</html>

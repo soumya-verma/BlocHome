@@ -1,0 +1,63 @@
+<div class="lands-container" style="position: relative; padding: 30px">
+  <a href="/sell"
+    ><button
+      style="
+        position: absolute;
+        left: 50px;
+        top: 0;
+        cursor: pointer;
+        background-color: transparent;
+      "
+    >
+      <span class="fa fa-refresh"></span> Refresh Properties
+    </button></a
+  >
+  <div class="w3-row landsPanel">
+    <% items.forEach(function(item){ %>
+    <form action="/remove" method="POST">
+      <div class="w3-third">
+        <div class="w3-card-4 property">
+          <table>
+            <tr>
+              <center>
+                <img
+                  src="data:image/<%=item.image.contentType%>;base64,
+                          <%=item.image.data.toString('base64')%>"
+                  height="200"
+                />
+              </center>
+            </tr>
+            <br />
+            <tr>
+              <td><span class="fa fa-user"></span>&nbsp; Owner</td>
+              <td><%=item.ownername%></td>
+            </tr>
+            <tr>
+              <td><span class="fa fa-money"></span> Price</td>
+              <td><%=item.price%>ETH</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="fa fa-map-marker"></span>&nbsp;&nbsp;Location
+              </td>
+              <td><%=item.location%></td>
+            </tr>
+          </table>
+          <div style="text-align: center; padding-top: 20px">
+            <button
+              class="w3-btn"
+              style="background-color: #09f; color: #fff"
+              type="submit"
+              name="removeprop"
+              value="<%=item._id%>"
+              onclick="window.confirm('Do you want to remove this property?')"
+            >
+              REMOVE
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <% }) %>
+  </div>
+</div>
