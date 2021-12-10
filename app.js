@@ -35,7 +35,7 @@ mongoose.connect(
     id +
     ":" +
     pass +
-    "@cluster0.81eob.mongodb.net/blochome?retryWrites=true&w=majority",
+    "@cluster0.mxc5s.mongodb.net/BlocHome?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     console.log("Database connected");
